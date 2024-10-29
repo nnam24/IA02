@@ -1,6 +1,7 @@
 import "./styles.css";
+import { Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from "react";
-import { Box, CircularProgress, Link, Typography } from "@mui/material";
+import { Box, CircularProgress, Typography } from "@mui/material";
 import axios from "axios";
 
 interface UnsplashPhoto {
@@ -77,7 +78,7 @@ const PhotoGallery: React.FC = () => {
         {photos.map((photo) => (
           <div className="photo-card" key={photo.id}>
             <Link
-              href={`/photos/${photo.id}`}
+              to={`/photos/${photo.id}`}
               style={{ textDecoration: "none" }}
               sx={{
                 height: "100%",
