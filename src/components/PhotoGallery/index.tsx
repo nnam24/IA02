@@ -79,10 +79,6 @@ const PhotoGallery: React.FC = () => {
           <div className="photo-card" key={photo.id}>
             <Link
               to={`/photos/${photo.id}`}
-              style={{ textDecoration: "none" }}
-              sx={{
-                height: "100%",
-              }}
             >
               <img
                 src={photo.urls.thumb}
